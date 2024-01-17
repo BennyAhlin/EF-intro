@@ -8,6 +8,7 @@ string[] PostCSV = File.ReadAllLines("Post.csv");
 string[] BlogCSV = File.ReadAllLines("Blog.csv");
 
 using var db = new BloggingContext();
+
 db.Database.EnsureDeleted();
 db.SaveChanges();
 
@@ -21,7 +22,7 @@ foreach (string line in UserCSV)
     if (alreadyExistCheck == null)
     {
         db.Add(new User { UserId = int.Parse(split[0]), Username = split[1], Password = split[2] });
-    }
+    }   
 }
 db.SaveChanges();
 
@@ -54,15 +55,10 @@ foreach (User user in db.Users.OrderBy(u => u.Username))
     {
         Console.WriteLine();
         Console.WriteLine(post.Title + "\t " + post.Content + "\t " + post.PublishedOn + " \t");
-        Console.WriteLine(post.Blog?.Name);
+        Console.Write(post.Blog?.Name + "\t");
         Console.WriteLine(post.Blog?.Url);
     }
     Console.WriteLine();
 
 }
 db.SaveChanges();
-
-
-
-
-

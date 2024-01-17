@@ -12,9 +12,8 @@ public class BloggingContext : DbContext
 
     public BloggingContext()
     {
-        var folder = Environment.SpecialFolder.LocalApplicationData;
-        var path = Environment.GetFolderPath(folder);
-        DbPath = System.IO.Path.Join(path, "cs.forts-BennyAhlin.db");
+        var folder = Environment.CurrentDirectory;
+        DbPath = System.IO.Path.Join(folder, "cs.forts-BennyAhlin.db");
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)

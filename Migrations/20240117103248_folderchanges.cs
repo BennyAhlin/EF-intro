@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EntityFrameworkUppgift.Migrations
 {
     /// <inheritdoc />
-    public partial class Updatedversion33 : Migration
+    public partial class folderchanges : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EntityFrameworkUppgift.Migrations
 {
     [DbContext(typeof(BloggingContext))]
-    [Migration("20240116134715_Updatedversion3.3")]
-    partial class Updatedversion33
+    [Migration("20240117103248_folderchanges")]
+    partial class folderchanges
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
